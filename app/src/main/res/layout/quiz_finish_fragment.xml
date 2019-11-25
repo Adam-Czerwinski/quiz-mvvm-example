@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:gravity="center"
+        android:background="#E2EEFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Twój wynik" />
+
+        <TextView
+            android:gravity="center"
+            android:textSize="44sp"
+            android:textColor="#79E9AD6D"
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="10"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:background="#F85656"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:id="@+id/buttonFinish"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Koniec"
+            />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="quizViewModel"
+            type="com.example.quizmvvmexample.screen.quiz.QuizViewModel" />
+    </data>
+
+    <LinearLayout
+        android:background="#B9DAFF"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="16sp"
+                android:gravity="end"
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{`Pytanie ` + (quizViewModel.currentIndex+1) + `/` + quizViewModel.numberOfQuestions}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Pytanie 1/10" />
+
+            <TextView
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{quizViewModel.currentQuestion.question}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header"
+                app:layout_constraintVertical_bias="0.120000005"
+                tools:text="Tu będzie pytanie" />
+
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:id="@+id/radio_group_answers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question"
+                >
+
+
+                <RadioButton
+                    android:id="@+id/question_answer_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{quizViewModel.currentQuestion.answers[0]}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/question"
+                    tools:text="Odpowiedź A" />
+
+                <RadioButton
+                    android:id="@+id/question_answer_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{quizViewModel.currentQuestion.answers[1]}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/question_answer_a"
+                    tools:text="Odpowiedź B"
+                    />
+
+                <RadioButton
+                    android:id="@+id/question_answer_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{quizViewModel.currentQuestion.answers[2]}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/question_answer_b"
+                    tools:text="Odpowiedź C" />
+
+                <RadioButton
+                    android:id="@+id/question_answer_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{quizViewModel.currentQuestion.answers[3]}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/question_answer_c"
+                    tools:text="Odpowiedź D" />
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <Button
+                android:background="#00A8A2"
+                android:id="@+id/button_next_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Następne" />
+            <Button
+                android:background="#009A94"
+                android:id="@+id/button_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakończ" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

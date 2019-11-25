@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Quiz mvvm example</string>
+    <string name="oAplikacji">Aplikacja została stworzona przez: Adam Czerwiński, Jakub Karmański, Michał Grzyśka</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
