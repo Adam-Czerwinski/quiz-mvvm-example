@@ -8,9 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.quizmvvmexample.R
 
-/**
- * A simple [Fragment] subclass.
- */
 class AboutFragment : Fragment() {
 
     override fun onCreateView(

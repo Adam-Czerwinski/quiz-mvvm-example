@@ -18,7 +18,7 @@ class Adapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.fragment_scores,
+                R.layout.layout_scores,
                 parent,
                 false
             )
@@ -31,8 +31,8 @@ class Adapter(
 
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var name: TextView = view.findViewById(R.id.name)
-        var score: TextView = view.findViewById(R.id.score)
+        var name: TextView = view.findViewById(R.id.namescore)
+        var score: TextView = view.findViewById(R.id.scorescore)
 
     }
 

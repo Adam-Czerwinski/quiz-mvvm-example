@@ -65,6 +65,7 @@ class QuizFragment : Fragment() {
         quizFragmentBinding.buttonFinish.setOnClickListener {
             val score = quizViewModel.finishQuiz()
             it.findNavController().navigate(
+
                 QuizFragmentDirections.actionQuizFragmentToQuizFinishFragment(
                     score,
                     quizViewModel.numberOfQuestions.value!!,

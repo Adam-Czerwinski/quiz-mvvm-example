@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:textColor="#F35A5A"
+        android:id="@+id/namescore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="name"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:textSize="36sp"
+        android:textColor="#FF9E5D"
+        android:id="@+id/scorescore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="score"
+
+        />
+
+</LinearLayout>
